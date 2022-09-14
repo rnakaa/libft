@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 02:38:13 by rnaka             #+#    #+#             */
-/*   Updated: 2022/09/14 16:21:09 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/09/14 19:56:36 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,10 @@ void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 	{
 		while (a < n)
 		{
-			buff1[n] = buff2[n];
 			n--;
+			buff1[n] = buff2[n];
 		}
+		buff1[n] = buff2[n];
 	}
 	return (buf1);
 }
