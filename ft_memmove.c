@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 02:38:13 by rnaka             #+#    #+#             */
-/*   Updated: 2022/09/14 19:56:36 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/09/15 00:14:11 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,14 @@ void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 	size_t		a;
 	char		*buff1;
 	const char	*buff2;
-
+	
+	if (!buf1 && !buf2)
+		return (NULL);
 	buff1 = buf1;
 	buff2 = buf2;
 	a = 0;
+	if (buff1 == buff2)
+		return (buff1);
 	if (buff1 < buff2)
 	{
 		while (a < n)
@@ -28,7 +32,7 @@ void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 			a++;
 		}
 	}
-	if (buff1 >= buff2)
+	if (buff1 > buff2)
 	{
 		while (a < n)
 		{
@@ -37,7 +41,7 @@ void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 		}
 		buff1[n] = buff2[n];
 	}
-	return (buf1);
+	return (buff1);
 }
 
 // #include <string.h>
