@@ -6,17 +6,17 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 01:49:48 by rnaka             #+#    #+#             */
-/*   Updated: 2022/09/14 23:36:33 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/09/17 17:52:33 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include<libc.h>
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t dst_len;
-	size_t src_len;
+	size_t	dst_len;
+	size_t	src_len;
 
 	if (!dst && src && size == 0)
 		return (ft_strlen(src));
@@ -26,7 +26,6 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 		return (dst_len);
 	if (size <= dst_len)
 		return (src_len + size);
-	
 	if (src_len < size - dst_len)
 		ft_memcpy(dst + dst_len, src, src_len + 1);
 	else
@@ -39,7 +38,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 // #includeid)
 // {"libft.h"
 // int main(vo
-	
+
 // 	printf("%zu",ft_strlcat(NULL, "src2", 0));
 	// printf("%lu", strlcat(NULL, "src2", 0));
 // 	// size_t	size;

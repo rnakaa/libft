@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:57:58 by rnaka             #+#    #+#             */
-/*   Updated: 2022/08/23 17:11:29 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/09/17 18:01:09 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *buf, int ch, size_t n)
 	a = 0;
 	while (0 < n)
 	{
-		h[a] = ch;
+		h[a] = (unsigned char)ch;
 		n--;
 		a++;
 	}
