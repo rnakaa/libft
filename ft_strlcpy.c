@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 03:01:11 by rnaka             #+#    #+#             */
-/*   Updated: 2022/09/14 14:25:44 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/09/19 17:42:49 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,29 +27,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (ft_strlen(src));
 }
-// size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
-// {
-// 	const char	*a;
-
-// 	a = src;
-// 	if (dstsize)
-// 		dstsize--;
-// 	while (dstsize-- && *a)
-// 		*dst++ = *a++;
-// 	*dst = '\0';
-// 	return ((sizeof a) / (sizeof a[0]));
-// }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main(void)
-// {
-// 	char	dst[100];
-// 	char	src[] = "42Tokyo";
-
-// 	printf("%zu\n", strlcpy(dst, src, 0));
-// 	printf("%s\n", dst);
-// 	printf("%zu\n", ft_strlcpy(dst, src, 0));
-// 	printf("%s\n", dst);
-// }
