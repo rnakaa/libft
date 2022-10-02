@@ -6,16 +6,13 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:20:14 by rnaka             #+#    #+#             */
-/*   Updated: 2022/09/13 18:38:59 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/09/28 12:11:52 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int a)
 {
 	if (('a' <= a && a <= 'z') || ('A' <= a && a <= 'Z'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }

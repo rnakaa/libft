@@ -6,11 +6,12 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 03:01:11 by rnaka             #+#    #+#             */
-/*   Updated: 2022/09/19 17:42:49 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/09/26 03:14:25 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
@@ -27,3 +28,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (ft_strlen(src));
 }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main(void)
+// {
+// 	char	dst[100];
+// 	char	src[] = "42Tokyo";
+
+// 	printf("%zu\n", strlcpy(dst, src, 0));
+// 	printf("%s\n", dst);
+// 	printf("%zu\n", ft_strlcpy(dst, src, 0));
+// 	printf("%s\n", dst);
+// }

@@ -6,31 +6,33 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 02:38:13 by rnaka             #+#    #+#             */
-/*   Updated: 2022/09/17 17:53:07 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/09/26 03:56:32 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void	*ft_memmove(void *buf1, const void *buf2, size_t n)
-{
-	size_t		a;
-	char		*buff1;
-	const char	*buff2 = buf2;
 
-	if (buf1 == buf2 || n == 0)
-		return (buf1);
-	buff1 = buf1;
-	a = 0;
-	if (buff1 < buff2)
+void	*ft_memmove(void *b1, const void *b2, size_t n)
+{
+	size_t		i;
+	char		*buf1;
+	const char	*buf2;
+
+	buf2 = b2;
+	if (b1 == b2 || n == 0)
+		return (b1);
+	buf1 = b1;
+	i = 0;
+	if (buf1 < buf2)
 	{
-		while (a < n)
+		while (i < n)
 		{
-			buff1[a] = buff2[a];
-			a++;
+			buf1[i] = buf2[i];
+			i++;
 		}
 	}
-	else if (buff1 > buff2)
-		while (a < n--)
-			buff1[n] = buff2[n];
-	return (buff1);
+	else if (buf1 > buf2)
+		while (i < n--)
+			buf1[n] = buf2[n];
+	return (buf1);
 }
