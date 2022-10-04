@@ -2,4 +2,4 @@
 *.o
 *.a
 /.vscode
-*tester*
+libft-tester-tokyo
