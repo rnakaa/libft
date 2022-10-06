@@ -22,6 +22,7 @@ SRCS	= ft_atoi.c		\
 		ft_strdup.c		\
 		ft_calloc.c
 
+
 OBJS	=	$(SRCS:.c=.o)
 
 CC	= cc
