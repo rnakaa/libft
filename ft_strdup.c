@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:40:33 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/03 22:54:09 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/06 21:22:30 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ char	*ft_strdup(const char *s)
 	char	*src;
 
 	src = (char *)s;
-	dest = malloc((ft_strlen(src)));
-	ft_strlcpy(dest,src,ft_strlen(src)+1);
+	dest = malloc((ft_strlen(src)+1));
+	ft_strlcpy(dest, src, ft_strlen(src));
+	*(dest + strlen(src)) = '\0';
 	return (dest);
 }
 // #include <stdio.h>
@@ -27,8 +28,12 @@ char	*ft_strdup(const char *s)
 // {
 // 	char	s[] = "hello waorld";
 // 	char	*p;
-
 // 	p = ft_strdup(s);
 // 	printf("%s",p);
 // 	return 0;
+// }
+// int main(void)
+// {
+// 	printf("%s\n", ft_strdup("safdasf"));
+// 	return (0);
 // }
