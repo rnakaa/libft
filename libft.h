@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:20:46 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/03 22:19:25 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/06 19:51:32 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,7 @@ int		ft_memcmp(const void *buf1, const void *buf2, size_t count);
 char	*ft_strnstr(const char	*b, const char *l, size_t n);
 int		ft_atoi(const char *s);
 char	*ft_strdup(const char *s);
+char	*ft_substr(char const *s,unsigned int start, size_t len);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strjoin(char const *s1, char const *s2);
 #endif
