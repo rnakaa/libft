@@ -6,13 +6,13 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 16:15:07 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/06 21:52:04 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/08 16:33:52 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr (char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*re;
 	int		i;

@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 18:30:32 by rnaka             #+#    #+#             */
-/*   Updated: 2022/09/28 11:54:32 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/08 16:31:25 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 // {
 // 	char str1[10] = "aaaaaaaa";
 // 	char str2[10] = "aaaaa";
-	
-// 	// char str3[] = "";
-// 	// char str4[] = "abe";
-// 	// str2[3] = 0;
-// 	// int i = 0;
-// 	// while (i != 20)
-// 	// {
-// 	// 	if ((int)(ft_strncmp(str1,str2,i)-(int)strncmp(str1,str2,i)) != 0)
-// 	// 		{
-// 	// printf("%d\n%d\n\n",(int)(ft_strncmp(str1,str2,100)-strncmp(str1,str2,100)),100);
-// 	// 		}
-// 	// 	i++;
-// 	// }
-// 	// printf("%d\n",ft_strncmp(str1,str2,3));
-// 	// printf("%d\n",strncmp(str1,str2,3));
 // 	printf("%d\n", strncmp(str1, str2, 100));
 // 	printf("%d\n", ft_strncmp(str1, str2, 100));
 // 	return (0);

@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 17:28:19 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/06 17:01:34 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/08 16:30:26 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	else
 	{
-		ch = (char *)malloc (size *count);
+		ch = (char *)malloc (size * count);
 		if (!ch)
 			return (NULL);
 	}
-	ft_bzero(ch, count *size);
+	ft_bzero(ch, count * size);
 	return ((void *)ch);
 }
 // # include<stdio.h>
