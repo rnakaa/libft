@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:40:33 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/06 21:22:30 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/08 16:55:07 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,23 @@ char	*ft_strdup(const char *s)
 {
 	char	*dest;
 	char	*src;
+	char	*save;
 
 	src = (char *)s;
-	dest = malloc((ft_strlen(src)+1));
-	ft_strlcpy(dest, src, ft_strlen(src));
-	*(dest + strlen(src)) = '\0';
+	dest = malloc(ft_strlen(src)+1);
+	save = dest;
+	while (*src)
+		*save++ = *src++;
+	*save = 0;
 	return (dest);
 }
 // #include <stdio.h>
 // int main()
 // {
-// 	char	s[] = "hello waorld";
+// 	char	s[] = "hello world";
 // 	char	*p;
 // 	p = ft_strdup(s);
-// 	printf("%s",p);
+// 	printf("%s",ft_strdup(s));
 // 	return 0;
 // }
-// int main(void)
-// {
-// 	printf("%s\n", ft_strdup("safdasf"));
-// 	return (0);
-// }
+//strlcpyは渡したサイズ-1分文字をコピーし、NULL留めする
