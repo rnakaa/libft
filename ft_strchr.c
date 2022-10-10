@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 19:07:32 by rnaka             #+#    #+#             */
-/*   Updated: 2022/09/26 04:31:43 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/10 17:49:35 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ char	*ft_strchr(const char *s, int c)
 // 	char b = '6';//search
 // 	char *c;
 
-// 	c = ft_strchr(a,-256);//my_ft
-// 	printf("%p\n",c);
+// 	c = ft_strchr(a,b);//my_ft
+// 	printf("%s\n",c);
 
-// 	c = strchr(a,-256);
-// 	printf("%p\n",c);//ori_ft
+// 	c = strchr(a,b);
+// 	printf("%s\n",c);//ori_ft
 // 	return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 16:15:07 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/08 16:33:52 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/10 18:32:05 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ft_strlen(s) < (size_t)start)
 		return (ft_strdup(""));
 	if (ft_strlen(s) - (size_t)start < len)
-		re = malloc(ft_strlen(s) - (size_t)start);
+		re = malloc(ft_strlen(s) - (size_t)start + 1);
 	else
-		re = malloc(len);
+		re = malloc(len + 1);
 	if (re == 0)
 		return (NULL);
 	while (len != 0 && s[i] != '\0')
