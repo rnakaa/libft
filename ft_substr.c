@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 16:15:07 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/10 18:32:05 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/12 22:28:42 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	re[i] = '\0';
 	return (re);
 }
+
 // #include <stdio.h>
 // int main(void)
 // {
-// 	printf("%s\n", ft_substr("12334", 40, 40));
+// 	printf("%s\n", ft_substr("asdfghjkl", 0, 4));
 // 	return (0);
 // }

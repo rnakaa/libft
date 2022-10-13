@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:57:27 by rnaka             #+#    #+#             */
-/*   Updated: 2022/09/26 03:51:46 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/12 20:19:13 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int	ft_memcmp(const void *b1, const void *b2, size_t n)
 // int main(void)
 // {
 // 	int i = 0;
-// 	char a[] = "1234567890";//
-// 	char b[] = "123457890";//search
+// 	char a[] = "abcd";//
+// 	char b[] = "xyz";//search
 // 	int c ;
 // 	int k = 2;
 
