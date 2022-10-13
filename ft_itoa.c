@@ -6,12 +6,13 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:04:10 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/10 22:50:21 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/13 21:30:40 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include "libft.h"
+
 static size_t	def_digit(int n)
 {
 	size_t	digit;
@@ -20,11 +21,12 @@ static size_t	def_digit(int n)
 	while (n / 10 != 0)
 	{
 		digit++;
-		n = n/10;
+		n = n / 10;
 	}
 	digit++;
-	return(digit);
+	return (digit);
 }
+
 static size_t	ft_mult(size_t digit)
 {
 	size_t	ing;
@@ -32,12 +34,38 @@ static size_t	ft_mult(size_t digit)
 	ing = 1;
 	while (digit--)
 		ing *= 10;
-	return(ing);
+	return (ing);
 }
-char *ft_itoa(int n)
+
+char	*allocator(int flag, size_t digit, char **restr)
+{
+	if (flag)
+		*restr = ft_calloc(digit + 2, sizeof(char));
+	else
+		*restr = ft_calloc(digit + 1, sizeof(char));
+	return (*restr);
+}
+
+char	*fill_digit(int flag, char *restr, size_t digit, int n)
+{
+	size_t	i;
+
+	i = 0;
+	if (flag)
+		restr[i++] = '-';
+	while (digit / 10 != 0)
+	{
+		restr[i++] = n / digit + '0';
+		n = n % digit;
+		digit = digit / 10;
+	}
+	restr[i] = n + '0';
+	return (restr);
+}
+
+char	*ft_itoa(int n)
 {
 	char	*restr;
-	size_t	s;
 	size_t	flag;
 	size_t	digit;
 
@@ -47,40 +75,29 @@ char *ft_itoa(int n)
 		flag = 1;
 		n *= -1;
 	}
-
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648")); 
-	
+		return (ft_strdup("-2147483648"));
 	digit = def_digit(n);
-	if (flag)
-		restr = malloc(digit + 2);
-	
-	else
-		restr = malloc(digit + 1);
-	digit--;
-	if (restr == NULL)
+	if (allocator(flag, digit, &restr) == NULL)
 		return (NULL);
+	digit--;
 	digit = ft_mult(digit);
-	s = 0;
-	if (flag)
-	{
-		restr[s] = '-';
-		s++;
-	}
-	while (digit/10 != 0)
-	{
-		printf("m:%d\n",n);
-		restr[s++] = n / digit +48;
-		n = n%digit;
-		digit = digit/10;
-	}
-	restr[s++] = n + 48;
-	restr[s] = '\0';	
-	return (restr);
+	return (fill_digit(flag, restr, digit, n));
 }
 // int main()
 // {
 // 	int m = -2147483648;
 // 	printf("m:%s",ft_itoa(m));
 // 	return 0;
-// }
+// }//restr = fill_digit(flag, restr, digit);
+	/*	s = 0;
+	if (flag)
+		restr[s++] = '-';
+	while (digit / 10 != 0)
+	{
+		restr[s++] = n / digit + '0';
+		n = n % digit;
+		digit = digit / 10;
+	}
+	restr[s++] = n + '0';
+	*/

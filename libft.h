@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:20:46 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/10 19:03:52 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/13 23:51:12 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 # define LIBFT_H
 # include<stdlib.h>
+# include<stdio.h>
 
 int		ft_isalpha(int a);
 int		ft_isdigit(int a);
@@ -38,9 +39,10 @@ int		ft_memcmp(const void *buf1, const void *buf2, size_t count);
 char	*ft_strnstr(const char	*b, const char *l, size_t n);
 int		ft_atoi(const char *s);
 char	*ft_strdup(const char *s);
-char	*ft_substr(char const *s,unsigned int start, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
 #endif

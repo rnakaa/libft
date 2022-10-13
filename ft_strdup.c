@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:40:33 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/08 16:55:07 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/13 22:41:04 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strdup(const char *s)
 
 	src = (char *)s;
 	dest = malloc(ft_strlen(src)+1);
+	if (dest == NULL)
+		return (NULL);
 	save = dest;
 	while (*src)
 		*save++ = *src++;
@@ -31,8 +33,7 @@ char	*ft_strdup(const char *s)
 // {
 // 	char	s[] = "hello world";
 // 	char	*p;
-// 	p = ft_strdup(s);
-// 	printf("%s",ft_strdup(s));
+// 	printf("%s",strdup(NULL));
 // 	return 0;
 // }
 //strlcpyは渡したサイズ-1分文字をコピーし、NULL留めする
