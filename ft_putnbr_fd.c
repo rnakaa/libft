@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 22:36:49 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/19 22:45:59 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/19 22:48:18 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-", 1);
 	}
 	if (n > 9)
-		ft_putnbr_fd(n /10 ,fd);
-	write(fd,&base[n % 10],1);
+		ft_putnbr_fd(n /10, fd);
+	write(fd, &base[n % 10], 1);
 }
 
 // #include <stdio.h>
