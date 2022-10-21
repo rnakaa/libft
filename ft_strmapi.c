@@ -6,7 +6,7 @@
 /*   By: rnaka <rnaka@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 19:31:25 by rnaka             #+#    #+#             */
-/*   Updated: 2022/10/19 21:32:07 by rnaka            ###   ########.fr       */
+/*   Updated: 2022/10/21 18:58:04 by rnaka            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,23 @@ char	*ft_strmapi(char const*s, char (*f)(unsigned int, char))
 	size_t	len;
 	size_t	i;
 	char	*ret;
-	char	*save;
 
 	len = 0;
 	i = 0;
+	if (s == 0)
+		return (NULL);
 	len = ft_strlen(s);
-	if (len == 0)
-		return (malloc(0));
-	ret = malloc(len);
+	if (f == 0)
+		return (NULL);
+	ret = malloc(len + 1);
 	if (ret == NULL)
 		return (ret);
-	save = ret;
 	while (i < len)
 	{
 		ret[i] = f(i, s[i]);
 		i++;
 	}
+	ret[i] = '\0';
 	return (ret);
 }
 
